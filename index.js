@@ -28,6 +28,6 @@ $(document).ready(function (){
   }
   
   function displayError() {
-    
+    $('#errors').html()
   }
   
