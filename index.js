@@ -20,7 +20,7 @@ $(document).ready(function (){
    let repoOwner = repository.dataset.owner;
    console.log(repoName)
    console.log(repoOwner)
-    $.get(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`, function(repoData) {
+    $.get(`https://ai.github.com/repos/${repoOwner}/${repoName}/commits`, function(repoData) {
         console.log(repoData)
         $('#details').html(
           repoData.map(function(commit) {
