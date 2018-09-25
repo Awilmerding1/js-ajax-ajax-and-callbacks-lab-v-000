@@ -11,7 +11,9 @@ $(document).ready(function (){
           return `<div style="display:flex"><img src="${repo.owner.avatar_url}", style="max-width:100px;max-height:100px;float:left;"><p style="padding-left:15px"><a href="${repo.html_url}">${repo.name}</a> - ${repo.description} - <a href="${repo.owner.html_url}">${repo.owner.login}</a> - <a href="#" data-repository="${repo.name}" data-owner="${repo.owner.login}" onclick="showCommits(this)">Show Commits</a></p></div>` 
         })
         );
-	  });
+	  }).fail(function() {
+      displayError()
+    })
   }
   
   function showCommits(repository) {
