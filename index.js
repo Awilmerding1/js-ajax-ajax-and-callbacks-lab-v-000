@@ -24,6 +24,8 @@ $(document).ready(function (){
              return `<ul><li>${commit.sha} - ${commit.commit.author.name} - ${commit.author.login}</li></ul>`
           })
           )
+    }).fail(function() {
+      displayError()
     })
   }
   
